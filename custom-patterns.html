@@ -17,7 +17,7 @@
 <body style='margin : 0px; overflow: hidden; font-family: Monospace;'>
 
 	<video id="video2" autoplay loop crossOrigin="anonymous" webkit-playsinline style="display:none">
-	<source src="video/video2.mp4" type='video/mp4'>
+	<source src="video/sintel.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
 </video>
 
 <video id="video" autoplay loop crossOrigin="anonymous" webkit-playsinline style="display:none">
@@ -115,6 +115,7 @@ function initialize()
 	let patternArray = ["pattern-bomb", "pattern-mash"];
 	let textureArray   = ["video", "video2"];
 	let geometry = new THREE.PlaneBufferGeometry(0.6, 0.6);
+	let loader = new THREE.TextureLoader();
 
 	for (let i = 0; i < 2; i++)
 	{
@@ -124,8 +125,10 @@ function initialize()
 			type : 'pattern', patternUrl : "data/" + patternArray[i] + ".patt",
 		});
 
-		let video = document.getElementById( textureArray[i] );
-		let texture = new THREE.VideoTexture( video );
+//		let video = document.getElementById( textureArray[i] );
+//		let texture = new THREE.VideoTexture( video );
+
+	let texture = loader.load( 'video/mash.webp' );
 
 
 		texture.minFilter = THREE.LinearFilter;
