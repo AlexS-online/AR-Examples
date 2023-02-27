@@ -115,7 +115,7 @@ function initialize()
 	let patternArray = ["pattern-bomb", "pattern-mash"];
 	let textureArray   = ["video", "video2"];
 	let geometry = new THREE.PlaneBufferGeometry(0.6, 0.6);
-	let loader = new THREE.TextureLoader();
+//	let loader = new THREE.TextureLoader();
 
 	for (let i = 0; i < 2; i++)
 	{
@@ -125,10 +125,10 @@ function initialize()
 			type : 'pattern', patternUrl : "data/" + patternArray[i] + ".patt",
 		});
 
-//		let video = document.getElementById( textureArray[i] );
-//		let texture = new THREE.VideoTexture( video );
+		let video = document.getElementById( textureArray[i] );
+		let texture = new THREE.VideoTexture( video );
 
-	let texture = loader.load( 'video/mash.webp' );
+//	let texture = loader.load( 'video/mash.webp' );
 
 
 		texture.minFilter = THREE.LinearFilter;
