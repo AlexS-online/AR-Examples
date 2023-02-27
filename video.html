@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-	<title>Live-AR</title>
+	<title>Live-AR!</title>
 	<!-- include three.js library -->
 	<script src='js/three.js'></script>
 	<!-- include jsartookit -->
@@ -16,12 +16,8 @@
 
 <body style='margin : 0px; overflow: hidden; font-family: Monospace;'>
 
-<video id="video2" autoplay loop crossOrigin="anonymous" webkit-playsinline style="display:none">
-	<source src="video/video2.mp4" type='video/mp4'>
-</video>
-
 <video id="video" autoplay loop crossOrigin="anonymous" webkit-playsinline style="display:none">
-	<source src="video/video.mp4" type='video/mp4'>
+	<source src="video/video2.mp4" type='video/mp4'> 
 </video>
 		
 <!-- 
@@ -122,7 +118,7 @@ function initialize()
 
 	let geometry1 = new THREE.PlaneBufferGeometry(0.6, 0.6);
 
-	let video = document.getElementById( 'video2' );
+	let video = document.getElementById( 'video' );
 	let texture = new THREE.VideoTexture( video );
 	texture.minFilter = THREE.LinearFilter;
 	texture.magFilter = THREE.LinearFilter;
