@@ -17,7 +17,7 @@
 <body style='margin : 0px; overflow: hidden; font-family: Monospace;'>
 
 <video id="video" autoplay loop crossOrigin="anonymous" webkit-playsinline style="display:none">
-	<source src="video/video.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+	<source src="video/video2.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
 </video>
 		
 <!-- 
@@ -113,10 +113,10 @@ function initialize()
 	markerRoot1 = new THREE.Group();
 	scene.add(markerRoot1);
 	let markerControls1 = new THREEx.ArMarkerControls(arToolkitContext, markerRoot1, {
-		type: 'pattern', patternUrl: "data/bomb.patt",
+		type: 'pattern', patternUrl: "data/pattern-mash.patt",
 	})
 
-	let geometry1 = new THREE.PlaneBufferGeometry(1, 1);
+	let geometry1 = new THREE.PlaneBufferGeometry(0.6, 0.6);
 
 	let video = document.getElementById( 'video' );
 	let texture = new THREE.VideoTexture( video );
